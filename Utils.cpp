@@ -5,13 +5,13 @@
 #include <sstream>
 #include "Utils.h"
 
-vector<string> split(string str, char delim) {
+vector<string> split(const string &str, char delimiter) {
     stringstream test(str);
     string current;
-    std::vector<std::string> seglist;
+    std::vector<std::string> seg_list;
 
-    while(getline(test, current, delim)) {
-        seglist.push_back(current);
+    while(getline(test, current, delimiter)) {
+        seg_list.push_back(current);
     }
-    return seglist;
+    return seg_list;
 }

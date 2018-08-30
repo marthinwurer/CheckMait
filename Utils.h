@@ -9,7 +9,7 @@
 #include <vector>
 using namespace std;
 
-vector<string> split(string str, char delim);
+vector<string> split(const string &str, char delimiter);
 
 class Utils {
 

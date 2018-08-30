@@ -12,20 +12,22 @@ using namespace std;
 
 class Board {
 private:
-    bool whiteQueenCastled;
-    bool whiteKingCastled;
-    bool blackQueenCastled;
-    bool blackKingCastled;
+    bool whiteQueenCanCastle;
+    bool whiteKingCanCastle;
+    bool blackQueenCanCastle;
+    bool blackKingCanCastle;
     int en_passant_row;
     int en_passant_file;
     char board[8][8];
-    bool current_player;
+    bool current_player; // true if white
     int halfmove;
     int fullmove;
 
 public:
     Board();
     Board(string fen);
+
+    const bool can_castle() const;
 
     friend ostream& operator<<(ostream& os, const Board& dt);
 
